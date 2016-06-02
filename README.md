@@ -1,2 +1,2 @@
-# docker-hibiscus
-Hibiscus on OpenJDK7 using a MySQL-Database
+# Docker Hibiscus
+[Hibiscus](https://www.willuhn.de/products/hibiscus-server/) on OpenJDK7 using a MySQL-Database
