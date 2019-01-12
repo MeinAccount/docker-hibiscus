@@ -1,7 +1,10 @@
-FROM java:openjdk-7-jre
+FROM java:openjdk-8-jdk
 
-ENV	HIBISCUS_VERSION 2.6.19
-ENV	HIBISCUS_DOWNLOAD_SHA256 4d236cedb391bb69a5799c7bf9cb513f816eae57
+RUN apt-get update && apt-get install -y \
+  mysql-client
+
+ENV	HIBISCUS_VERSION 2.8.7
+ENV	HIBISCUS_DOWNLOAD_SHA256 df9db1a9eefefe7a14581006ed46f86f41db4162
 
 RUN curl -fsSL https://www.willuhn.de/products/hibiscus-server/releases/hibiscus-server-$HIBISCUS_VERSION.zip -o hibiscus-server.zip
 RUN echo "$HIBISCUS_DOWNLOAD_SHA256 hibiscus-server.zip" | sha1sum -c -
@@ -12,6 +15,7 @@ RUN echo "Europe/Berlin" > /etc/timezone
 RUN dpkg-reconfigure -f noninteractive tzdata
 
 COPY ./docker-entrypoint.sh /
+COPY ./create-tables.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 8080
