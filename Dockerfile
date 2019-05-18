@@ -1,4 +1,4 @@
-FROM java:openjdk-8-jdk
+FROM openjdk:11-jre
 
 RUN apt-get update && apt-get install -y \
   mysql-client
