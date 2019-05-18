@@ -15,4 +15,5 @@ listener.http.auth=true
 listener.http.ssl=false
 EOF
 
-${@-/hibiscus-server/jameicaserver.sh -p $PASSWORD -f /srv/hibiscus}
+cd /hibiscus-server
+java -Djava.net.preferIPv4Stack=true -Xmx512m -Djava.security.policy=file:///policy $_JCONSOLE -jar jameica-linux.jar -d -p $PASSWORD -f /srv/hibiscus
