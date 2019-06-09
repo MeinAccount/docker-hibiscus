@@ -6,9 +6,11 @@ Create tables running the `create-tables.sh` script.
 
 Hibiscus application parameters
 - PASSWORD
+- [USE_SSL = FALSE]
 
 Databse connection parameters
 - DB_HOST
 - DB_NAME
 - DB_USERNAME
 - DB_PASSWORD
+- [DB_PORT = 3306]
