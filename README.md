@@ -6,8 +6,9 @@ ENV to set:
 
 - PASSWORD
 
-- DB_HOST
+- DB_HOST,like 192.168.5.5
 - DB_NAME
 - DB_USERNAME
 - DB_PASSWORD
-- [DB_PORT]
+- [DB_PORT = 3306]
+- [USE_SSL = FALSE]
