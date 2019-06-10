@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-DB_PORT=${1:-"3306"}
-USE_SSL=${1:-"false"}
+$DB_PORT=${1:-"3306"}
+$USE_SSL=${1:-"false"}
 
 cat > /hibiscus-server/cfg/de.willuhn.jameica.hbci.rmi.HBCIDBService.properties <<EOF
 database.driver=de.willuhn.jameica.hbci.server.DBSupportMySqlImpl
