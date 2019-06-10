@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-$DB_PORT=${1:-"3306"}
+$DB_PORT=${1:=3306}
 $USE_SSL=${1:-"false"}
 
 cat > /hibiscus-server/cfg/de.willuhn.jameica.hbci.rmi.HBCIDBService.properties <<EOF
