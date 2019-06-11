@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 DB_PORT=${DB_PORT:-3306}
-$USE_SSL=${USE_SSL:-"false"}
+USE_SSL=${USE_SSL:-"false"}
 
 cat > /hibiscus-server/cfg/de.willuhn.jameica.hbci.rmi.HBCIDBService.properties <<EOF
 database.driver=de.willuhn.jameica.hbci.server.DBSupportMySqlImpl
@@ -14,7 +14,7 @@ cat > /hibiscus-server/cfg/de.willuhn.jameica.webadmin.Plugin.properties <<EOF
 listener.http.address=0.0.0.0
 listener.http.port=8080
 listener.http.auth=true
-listener.http.ssl=$USE_SSL
+listener.http.ssl=false
 EOF
 
 cd /hibiscus-server
