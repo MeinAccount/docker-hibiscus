@@ -3,8 +3,8 @@ FROM openjdk:11-jre
 RUN apt-get update && apt-get install -y \
   mysql-client
 
-ENV	HIBISCUS_VERSION 2.8.10
-ENV	HIBISCUS_DOWNLOAD_SHA256 f517b6d079f30b7c42a7753a722012b5de2f3194
+ENV	HIBISCUS_VERSION 2.8.15
+ENV	HIBISCUS_DOWNLOAD_SHA256 86223950a0681d3bab3a507d7fd4a70da73a37f8
 
 RUN curl -fsSL https://www.willuhn.de/products/hibiscus-server/releases/hibiscus-server-$HIBISCUS_VERSION.zip -o hibiscus-server.zip
 RUN echo "$HIBISCUS_DOWNLOAD_SHA256 hibiscus-server.zip" | sha1sum -c -
