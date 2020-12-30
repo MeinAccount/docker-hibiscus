@@ -16,4 +16,4 @@ listener.http.ssl=false
 EOF
 
 cd /hibiscus-server
-java -Djava.net.preferIPv4Stack=true -Xmx512m -Djava.security.policy=file:///policy $_JCONSOLE -jar jameica-linux.jar -d -p $PASSWORD -f /srv/hibiscus
+/usr/bin/java -Djava.net.preferIPv4Stack=true -Xmx512m -Djava.security.policy=file:///policy $_JCONSOLE -jar jameica-linux.jar -d -p $PASSWORD -f /srv/hibiscus
