@@ -1,7 +1,7 @@
 FROM openjdk:11-jre
 
 RUN apt-get update && apt-get install -y \
-  mysql-client
+  mariadb-client
 
 ENV	HIBISCUS_VERSION 2.8.10
 ENV	HIBISCUS_DOWNLOAD_SHA256 f517b6d079f30b7c42a7753a722012b5de2f3194
