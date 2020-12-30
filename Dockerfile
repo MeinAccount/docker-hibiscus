@@ -17,6 +17,7 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 COPY ./docker-entrypoint.sh /
 COPY ./create-tables.sh /
 COPY ./policy /
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 8080
